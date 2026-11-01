@@ -261,3 +261,15 @@ tags: [log]
 - `AGENTS.md` 第 10 节：同步为「`.obsidian/` 默认整体忽略；如需共享配置，用 `!.obsidian/app.json` 等例外规则」。
 - 验证：`git check-ignore -v .obsidian/app.json` → `.gitignore:2:.obsidian/`；`git status --short` 已不再出现 `.obsidian/`。
 - 说明：当前仓库尚无 commit，`.obsidian/` 从未入库，因此不需要 `git rm --cached`；若未来已跟踪，执行 `git rm -r --cached .obsidian` 后再提交。
+
+---
+
+## [2026-11-01] publish | 创建 GitHub 公开仓库并上传 Wiki
+
+- 仓库：https://github.com/Qiyu5201314/BinaryBenchMark （Public）
+- 范围：`wiki/` + `AGENTS.md` + `README.md` + `.gitignore`，共 **67 个文件**。
+- 排除：`raw/`（版权与体积）与 `.obsidian/`（个人状态与插件 bundle），均已在 `.gitignore` 中整体忽略。
+- 初始提交：`50a116d`，提交信息 `init: BinaryBenchMark knowledge base (CyberGym, AgentCyberRange, binary closed-book frontier)`。
+- 分支：`main`，已设置 `origin/main` 跟踪。
+- 校验：远端 HEAD 与本地 `50a116d` 一致；top-level 仅 `.gitignore`、`AGENTS.md`、`README.md`、`wiki/`；`git ls-tree` 中无 `raw/` 或 `.obsidian/`。
+- 说明：`raw/` 仅保留在本地；Wiki 中的 `raw/...` 路径在公开仓库中不存在，原始 URL 仍在各来源页「来源」小节。
