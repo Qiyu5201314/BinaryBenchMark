@@ -1,0 +1,17 @@
+# Obsidian 本地状态（整体忽略）
+.obsidian/
+
+# 公开仓库：不上传 raw 原始论文/网页（版权与体积）
+raw/
+
+# 系统与临时文件
+.trash/
+.DS_Store
+Thumbs.db
+desktop.ini
+
+# 运行产物
+.cage_runs/
+.cage_corpus/
+__pycache__/
+*.pyc
